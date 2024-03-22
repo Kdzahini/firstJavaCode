@@ -6,18 +6,38 @@ public class Laptop extends Product{
 	int ram;
 	int ssd;
 	double processer;
+	int laptopInventory;
 	
-	public Laptop (int id, String name, double price, double rating, double screenSize, int ram, int ssd, double processer){
+
+	
+	public Laptop (int id, String name, double price, int laptopInventory){
 
 		this.id =id;
 		this.name=name;
 		this.price=price;
-		this.rating=rating;
-		this.screenSize=screenSize;
-		this.ram=ram;
-		this.ssd=ssd;
-		this.processer=processer;
+		this.laptopInventory=laptopInventory;
+		
+		
 	}
+	
+	public void addLaptopInventory(int laptopinventory) {
+		this.laptopInventory= this.laptopInventory+laptopinventory;
+			
+		
+	}
+	
+	public int saleLaptop(int laptopinventory) {
+		this.laptopInventory=this.laptopInventory-laptopinventory;
+		return laptopinventory;
+		
+	}
+	
+	public int checkInventoryLaptop() {
+		return this.laptopInventory;
+		
+	}
+	
+	
 				
 		
 	public Laptop() {
@@ -52,8 +72,16 @@ public class Laptop extends Product{
 		System.out.println(a.getProcesser());
 		
 	}
-
 	
+	
+
+	public int getlaptopInventory() {
+		return laptopInventory;
+	}
+	public void setlaptopInventory(int laptopInventory) {
+		this.laptopInventory = laptopInventory;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -118,7 +146,10 @@ public class Laptop extends Product{
 		this.processer = processer;
 	}
 	
-	
+	 @Override
+	    public String toString() {
+	        return "ID: " + id + ", Name: " + name + ", Price: $" + price+ ", Quantity: " + laptopInventory;
+	    }
 	
 		
 		

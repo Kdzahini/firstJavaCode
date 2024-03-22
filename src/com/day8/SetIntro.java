@@ -10,6 +10,28 @@ public class SetIntro {
 		
 		// venn  - diagrams 
 		
+		
+		
+		
+		
+		
+		// git init   
+		// git status 
+		
+		// git add filename 
+		
+		// git add .
+		
+		// git commit -m "message"
+		
+		
+		// git remote add origin "link"
+		
+		//git push -u origin master 
+		
+		
+		
+//		git clone  "link"
 
 	}
 

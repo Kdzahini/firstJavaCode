@@ -4,16 +4,34 @@ public class Light extends Product{
 	
 	double wats;
 	int lumens;
+	int lightInventory;
 	
-	public Light (int id, String name, double price, double rating, double wats, int lumens) {
+	public Light (int id, String name, double price, int lightInventory) {
 		this.id =id;
 		this.name=name;
 		this.price=price;
-		this.rating=rating;
-		this.wats=wats;
-		this.lumens=lumens;
+		this.lightInventory=lightInventory;
 	
 	}
+	
+	
+	public void addlightInventory(int lightinventory) {
+		this.lightInventory= this.lightInventory+lightinventory;
+			
+		
+	}
+	
+	public int saleLight(int lightinventory) {
+		this.lightInventory=this.lightInventory-lightinventory;
+		return lightinventory;
+		
+	}
+	
+	public int checkInventoryLight() {
+		return this.lightInventory;
+		
+	}
+	
 	
 	public Light() {
 		System.out.println();
@@ -39,6 +57,13 @@ public class Light extends Product{
 		System.out.println(a.getWats());
 		System.out.println(a.getLumens());
 		
+	}
+	
+	public int getlightInventory() {
+		return lightInventory;
+	}
+	public void setlightInventory(int lightInventory) {
+		this.lightInventory = lightInventory;
 	}
 	
 	public int getId() {
@@ -81,6 +106,11 @@ public class Light extends Product{
 	public void setLumens(int lumens) {
 		this.lumens = lumens;
 	}
+	
+	 @Override
+	    public String toString() {
+	        return "ID: " + id + ", Name: " + name + ", Price: $" + price + ", Quantity: " + lightInventory;
+	    }
 		
 	
 

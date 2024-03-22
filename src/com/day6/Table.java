@@ -5,16 +5,34 @@ public class Table extends Product{
 	double height;
 	double width;
 	double length;
+	int tableInventory;
 	
-	public Table (int id, String name, double price, double rating, double height, double width, double  length) {
+	public Table (int id, String name, double price, int tableInventory) {
 		this.id =id;
 		this.name=name;
 		this.price=price;
-		this.rating=rating;
-		this.height=height;
-		this.width=width;
-		this.length=length;
+		this.tableInventory=tableInventory;
+		
 	}
+	
+	
+	public void addtableInventory(int tableinventory) {
+		this.tableInventory= this.tableInventory+tableinventory;
+			
+		
+	}
+	
+	public int saleTable(int tableinventory) {
+		this.tableInventory=this.tableInventory-tableinventory;
+		return tableinventory;
+		
+	}
+	
+	public int checkInventoryTable() {
+		return this.tableInventory;
+		
+	}
+	
 	
 	public Table() {
 		System.out.println();
@@ -45,7 +63,12 @@ public class Table extends Product{
 	
 		}
 
-		
+		public int gettableInventory() {
+			return tableInventory;
+		}
+		public void settableInventory(int tableInventory) {
+			this.tableInventory = tableInventory;
+		}
 		public int getId() {
 			return id;
 		}
@@ -93,6 +116,11 @@ public class Table extends Product{
 		public void setLength(double length) {
 			this.length = length;
 		}
+		
+		 @Override
+		    public String toString() {
+		        return "ID: " + id + ", Name: " + name + ", Price: $" + price + ", Quantity: " + tableInventory;
+		    }
 			
 		 
 		

@@ -15,6 +15,26 @@ public class MapsIntro {
 		
 		//
 		
+		
+		// Hashmaps
+		
+	//---------------------------------------------------------------------------------------------------	
+		
+		
+		// LinkedhashMap
+		//use double linked list
+		//need  more memory
+		//hashMap will accept null as keys
+		//LinkedhashMap follow the insertion order
+		
+//------------------------------------------------------------------------------------------------------
+		
+		//TreeMap-> => sortedMap interface => time complexity => 0(log(n)
+		//balanced Binary trees => AVL trees or Red black trees
+		// 
+		
+		
+		
 
 	}
 

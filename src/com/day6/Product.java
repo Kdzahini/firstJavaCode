@@ -5,6 +5,7 @@ public class  Product {
 	String name;
 	double price;
 	double rating;
+	int inventory;
 	
 	
 	public static void main(String[] args) {
